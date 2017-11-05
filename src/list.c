@@ -4,8 +4,7 @@ List* list_create()
 {
     List *list = malloc(sizeof(List));
 
-    if (list != NULL)
-    {
+    if (list != NULL) {
         list->size = 0;
         list->head = NULL;
         list->tail = NULL;
@@ -16,13 +15,10 @@ List* list_create()
 
 void list_add(List *list, Node *node)
 {
-    if (list->size == 0)
-    {
+    if (list->size == 0) {
         node->next = NULL;
         list->head = list->tail = node;
-    }
-    else
-    {
+    } else {
         Node *tail = list->tail;
         tail->next = node;
         node->next = NULL;
@@ -57,12 +53,9 @@ void list_remove(List *list, Node *node)
     Node *head = list->head;
 
     if (list->size == 0)
-    {
         return;
-    }
 
-    if (head == node && list->size == 1)
-    {
+    if (head == node && list->size == 1) {
         list->head = list->tail = NULL;
         list->size = 0;
         free(node->data);
@@ -70,18 +63,13 @@ void list_remove(List *list, Node *node)
         return;
     }
 
-    while (head != NULL)
-    {
-        if (head == node)
-        {
+    while (head != NULL) {
+        if (head == node) {
             Node *next = head->next;
 
-            if (next != NULL)
-            {
+            if (next != NULL) {
                 head->next = next->next;
-            }
-            else
-            {
+            } else {
                 head->next = NULL;
             }
 
