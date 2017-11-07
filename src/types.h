@@ -7,4 +7,6 @@ typedef uint32_t    u32;
 typedef int16_t     i16;
 typedef int32_t     i32;
 
+typedef	enum {false, true} bool;
+
 #endif
