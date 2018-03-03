@@ -9,4 +9,10 @@ typedef int32_t     i32;
 
 typedef enum {false, true} bool;
 
+typedef struct
+{
+    double x;
+    double y;
+} v2;
+
 #endif
