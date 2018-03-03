@@ -1,6 +1,7 @@
 #include "list.h"
 
-List* list_create()
+List*
+list_create()
 {
     List *list = malloc(sizeof(List));
 
@@ -13,7 +14,8 @@ List* list_create()
     return list;
 }
 
-void list_add(List *list, Node *node)
+void
+list_add(List *list, Node *node)
 {
     if (list->size == 0) {
         node->next = NULL;
@@ -28,7 +30,8 @@ void list_add(List *list, Node *node)
     list->size++;
 }
 
-Node* node_create(void *value)
+Node*
+node_create(void *value)
 {
     Node *node = (Node *)malloc(sizeof(Node));
     node->data = value;
@@ -37,18 +40,21 @@ Node* node_create(void *value)
     return node;
 }
 
-void list_add_value(List *list, void *value)
+void
+list_add_value(List *list, void *value)
 {
     list_add(list, node_create(value));
 }
 
-void list_clear(List *list)
+void
+list_clear(List *list)
 {
     list->head = list->tail = NULL;
     list->size = 0;
 }
 
-void list_remove(List *list, Node *node)
+void
+list_remove(List *list, Node *node)
 {
     Node *head = list->head;
 
