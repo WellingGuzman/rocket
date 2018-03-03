@@ -1,5 +1,5 @@
-#ifndef math_h
-#define math_h
+#ifndef colors_h
+#define colors_h
 
 #include "head.h"
 
