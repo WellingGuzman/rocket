@@ -16,4 +16,11 @@ typedef struct
     double y;
 } Vector2;
 
+typedef struct
+{
+    u32 start_time;
+    u32 last_time;
+    double elapsed_time;
+} GameTime;
+
 #endif
