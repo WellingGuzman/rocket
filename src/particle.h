@@ -4,9 +4,9 @@
 typedef struct
 {
     // Starting point
-    v2 starting_point;
-    v2 position;
-    v2 velocity;
+    Vector2 starting_point;
+    Vector2 position;
+    Vector2 velocity;
 
     double life;
     // double angle;

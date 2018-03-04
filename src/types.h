@@ -13,6 +13,6 @@ typedef struct
 {
     double x;
     double y;
-} v2;
+} Vector2;
 
 #endif
