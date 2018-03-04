@@ -4,24 +4,21 @@
 typedef struct
 {
     // Starting point
-    double x;
-    double y;
+    v2 starting_point;
+    v2 position;
+    v2 velocity;
 
-    double px;
-    double py;
     double life;
-    double angle;
-    double speed;
+    // double angle;
+    // double speed;
 
-    double vx;
-    double vy;
-
-    char   visible;
-    double wait;
-    double waited;
+    // char   visible;
+    // double wait;
+    // double waited;
 
     unsigned int color;
 } Particle;
 
+Particle CreateParticle(double x, double y, double life, double angle, double speed);
 
 #endif

@@ -3,6 +3,7 @@
 
 #include "types.h"
 
+#define PI 3.14159265359;
 #define global_variable static
 #define internal static
 #define local_persist static
