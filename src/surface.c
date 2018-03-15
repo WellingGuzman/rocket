@@ -37,7 +37,7 @@ void FlipSurfaceVertically(SDL_Surface *surface)
     {
         x = height - 1;
         y = 0;
-        offsetA = 0 + i;
+        offsetA = i;
         offsetB = (width * (height - 1)) + i;
 
         while (x > y)
@@ -48,8 +48,8 @@ void FlipSurfaceVertically(SDL_Surface *surface)
 
             x--;
             y++;
-            offsetA += 16;
-            offsetB -= 16;
+            offsetA += width;
+            offsetB -= width;
         }
     }
 }
