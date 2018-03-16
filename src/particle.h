@@ -20,5 +20,7 @@ typedef struct
 } Particle;
 
 Particle CreateParticle(double x, double y, double life, double angle, double speed);
+// TODO: Add update particle function
+void UpdateParticle(Particle *p, double delta);
 
 #endif
