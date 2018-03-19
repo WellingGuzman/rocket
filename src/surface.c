@@ -16,7 +16,7 @@ void FlipSurfaceHorizontally(SDL_Surface *surface)
 
         while (x > y)
         {
-            temp = rpixels[offset + x];
+            temp = pixels[offset + x];
             memcpy(&pixels[offset + x], &pixels[offset + y], sizeof(u32));
             memcpy(&pixels[offset + y], &temp, sizeof(u32));
             x--;
