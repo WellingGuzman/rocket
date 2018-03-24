@@ -10,17 +10,17 @@ void FlipSurfaceHorizontally(SDL_Surface *surface)
 
     for (i = 0; i < height; i++)
     {
-        x = width - 1;
-        y = 0;
+        x = 0;
+        y = width - 1;
         offset = i * height;
 
-        while (x > y)
+        while (y > x)
         {
             temp = pixels[offset + x];
             memcpy(&pixels[offset + x], &pixels[offset + y], sizeof(u32));
             memcpy(&pixels[offset + y], &temp, sizeof(u32));
-            x--;
-            y++;
+            x++;
+            y--;
         }
     }
 }
@@ -35,19 +35,19 @@ void FlipSurfaceVertically(SDL_Surface *surface)
 
     for (i = 0; i < width; i++)
     {
-        x = height - 1;
-        y = 0;
+        x = 0;
+        y = height - 1;
         offsetA = i;
         offsetB = (width * (height - 1)) + i;
 
-        while (x > y)
+        while (y > x)
         {
             temp = pixels[offsetA];
             memcpy(&pixels[offsetA], &pixels[offsetB], sizeof(u32));
             memcpy(&pixels[offsetB], &temp, sizeof(u32));
 
-            x--;
-            y++;
+            x++;
+            y--;
             offsetA += width;
             offsetB -= width;
         }
