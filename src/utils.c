@@ -1,19 +1,16 @@
 #include "utils.h"
 
-void
-turn_flag_on(int *options, int option)
+void TurnOnFlag(int *options, int option)
 {
     (*options) |= option;
 }
 
-void
-turn_flag_off(int *options, int option)
+void TurnOffFlag(int *options, int option)
 {
     (*options) &= ~option;
 }
 
-bool
-is_flag_on(int options, int option)
+bool IsFlagOn(int options, int option)
 {
     return options & option;
 }
