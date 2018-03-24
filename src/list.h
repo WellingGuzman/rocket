@@ -15,11 +15,13 @@ typedef struct List
     struct Node *tail;
 } List;
 
-List* list_create();
-void list_add_value(List *list, void *value);
+List* CreateList();
+
+void AddNodeToList(List *list, Node *node);
+void AddValueToList(List *list, void *value);
 // Node* list_current(List *list);
-void list_remove(List *list, Node *node);
-void list_clear(List *list);
-Node * node_create(void *value);
+void RemoveItemFromList(List *list, Node *node);
+void ClearList(List *list);
+Node* CreateListNode(void *value);
 
 #endif
